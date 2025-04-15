@@ -1,0 +1,93 @@
+/* 팝업 */
+.menu_bg {
+    display: none;
+}
+/* 헤더 */
+/* 메인메뉴 */
+.top_hd {
+    display: flex; flex-flow: row nowrap; 
+    justify-content: space-between;
+    padding: 32px 32px 16px 32px;
+    margin-top: 40px;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.lt_box .return_top img {
+    width: 40px;
+}
+.menu .menu_box {
+    display: flex; flex-flow: row nowrap;
+    border-radius: 99px;
+    background: rgba(255, 255, 255, 0.2);
+}
+.menu .menu_box .menu_sub {
+    padding: 20px 32px;
+    font-weight: 900;
+}
+.rt_box {
+    display: flex; flex-flow: column;
+}
+.rt_box a {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: #fff;
+    display: flex; align-items: center; justify-content: center;
+}
+.rt_box img {
+    width: 20px;
+}
+.rt_box .cart {
+    margin-bottom: 25px;
+}
+/* 메인 */
+/* 광고글 */
+.advertise_box {
+    background: #c20019;
+    padding: 5px;
+    padding: 10px 0;
+}
+.advertise_box .advertise {
+    font-size: 1.25rem; font-weight: 700;
+    color: #fff;
+    text-align: right;
+    animation: marquee 15s linear infinite;
+}
+.bnr_slide {
+    position: relative;
+}
+.bnr_img {
+    width: 100%;
+    aspect-ratio: 19.5 / 9;
+    overflow: hidden;
+    position: relative;
+}
+.bnr_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.bnr_box {
+    position: absolute;
+    left: 2%;
+    bottom: 5%;
+}
+.bnr_txt {
+    font-size: 3rem;
+    color: #fff;
+    padding-bottom: 15px;
+}
+.shop {
+    font-size: 0.938rem;
+    font-weight: 600;
+    color: #fff;
+    background: #c20019;
+    border-radius: 99px;
+    padding: 9px 40px 8px
+}
+/* 애니메이션 */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100%)); }
+  }
