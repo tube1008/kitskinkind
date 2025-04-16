@@ -4,6 +4,7 @@
 }
 /* 헤더 */
 /* 메인메뉴 */
+.contents {background: #faf3e8;}
 .top_hd {
     display: flex; flex-flow: row nowrap; 
     justify-content: space-between;
@@ -53,6 +54,7 @@
     text-align: right;
     animation: marquee 15s linear infinite;
 }
+/* 첫번째 섹션 */
 .bnr_slide {
     position: relative;
 }
@@ -86,6 +88,135 @@
     border-radius: 99px;
     padding: 9px 40px 8px
 }
+/* 두번째 섹션 */
+.bnr_title {
+    padding: 80px 32px 50px 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.bnr_title h2 {
+    font-size: 5rem;
+    color: #c20019;
+    flex-basis: 70%
+}
+.shop_all {
+    background: #c20019;
+    padding: 9px 40px 8px;
+    border-radius: 99px;
+    height: 100%;
+    color: #fff;
+}
+.content_box_02 {
+    padding: 0px 40px;
+}
+.bnr_bg {
+    position: relative;
+}
+.red_bnr {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 10;
+}
+.product_name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: #fff;
+}
+.count {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #fff;
+    padding-left: 10px;
+}
+.swiper-slide {
+    width: clamp(200px, 25vw, 250px);
+    flex-shrink: 0;
+}
+.pro_box {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.view {
+    position: absolute;
+    inset: 0;
+    background: #c20019;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 15;
+}
+/* 호버 시 보여짐 */
+.pro_box:hover .view {
+    opacity: 1;
+}
+.bnr_name {
+    font-size: 2.5rem;
+    color: #fff;
+}
+.product_bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/* 세번째 섹션 */
+/* 네번째 섹션 */
+.cont_title {
+    padding: 80px 32px 50px 32px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.title {
+    font-size: 5rem;
+    color: #c20019;
+    flex-basis: 70%
+}
+.content_box_03 {
+    padding: 0px 40px;
+}
+.bnr_bg {
+    position: relative;
+}
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* 기본적으로 .second_img는 숨김 */
+  .second_img {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* .first_img에 hover 시 .second_img가 나타남 */
+  .swiper-slide:hover .second_img {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* 이미지 크기 조절 - 반응형 처리 */
+  .first_img img,
+  .second_img img,
+  .second_img video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
 /* 애니메이션 */
 @keyframes marquee {
     0% { transform: translateX(0); }
