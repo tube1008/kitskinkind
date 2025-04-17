@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menu_box .menu_sub");
+    const activeBg = document.querySelector(".active-bg");
+
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const itemCount = menuItems.length;
+            const percent = 100 / itemCount;
+            activeBg.style.left = `${index * percent}%`;
+            activeBg.style.width = `${percent}%`;
+
+            // 선택된 메뉴 표시 (선택사항)
+            menuItems.forEach(i => i.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+});
+
 let swiperContainer = document.querySelector('.content_box')
 let swiper = new Swiper('.content_box', {
     // 한 번에 보여줄 슬라이드 수
@@ -7,7 +27,7 @@ let swiper = new Swiper('.content_box', {
     // 한 번에 넘길 슬라이드 수
     slidesPerGroup: 1, 
     loop: true,
-    autoplay:{delay: 6000,},
+    autoplay:{delay: 7000,},
     centeredSlides : true,
 })
 

@@ -1,3 +1,4 @@
+html::-webkit-scrollbar {display: none;}
 /* 팝업 */
 .menu_bg {
     display: none;
@@ -15,18 +16,53 @@
     width: 100%;
     z-index: 1000;
 }
-.lt_box .return_top img {
+.return_top img {
     width: 40px;
 }
+.return_top img:hover {
+    filter: blur(5px);
+    transition: all 0.2s ease-in;
+}
 .menu .menu_box {
-    display: flex; flex-flow: row nowrap;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
     border-radius: 99px;
     background: rgba(255, 255, 255, 0.2);
-}
-.menu .menu_box .menu_sub {
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .menu .menu_box .menu_sub {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .menu .menu_box .menu_sub a {
+    display: block;
+    width: 100%;
     padding: 20px 32px;
-    font-weight: 900;
-}
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* 슬라이딩 백그라운드 */
+  .active-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0; /* li 하나 너비 */
+    background-color: white;
+    border-radius: 99px;
+    transition: left 0.4s ease;
+    z-index: 1;
+  }
 .rt_box {
     display: flex; flex-flow: column;
 }
@@ -48,11 +84,9 @@
     padding: 5px;
     padding: 10px 0;
 }
-.advertise_box .advertise {
+marquee {
     font-size: 1.25rem; font-weight: 700;
     color: #fff;
-    text-align: right;
-    animation: marquee 15s linear infinite;
 }
 /* 첫번째 섹션 */
 .bnr_slide {
@@ -184,41 +218,63 @@
 .content_box_03 {
     padding: 0px 40px;
 }
-.bnr_bg {
-    position: relative;
+/* 푸터 */
+footer {background: #faf3e8; padding: 40px;}
+.information {
+    display: flex;
+    flex-flow: row nowrap;
 }
-.swiper-slide {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* 기본적으로 .second_img는 숨김 */
-  .second_img {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 2;
-  }
-  
-  /* .first_img에 hover 시 .second_img가 나타남 */
-  .swiper-slide:hover .second_img {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  /* 이미지 크기 조절 - 반응형 처리 */
-  .first_img img,
-  .second_img img,
-  .second_img video {
+.info_box {padding-right: 5rem;}
+.info_intro {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #c20019;
+}
+.insta, .email, .pol {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #c20019;
+    text-decoration: underline;    
+}
+.enter_email {
+    max-width: 430px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #c20019;
+    border-radius: 25px;
+    margin: 24px 0;
+    align-items: center;
+}
+.enter_email span {
+    color: #c20019;
+}
+.arrow {
+    width: 24px;
+}
+.etc {
+}
+.etc p {
+    font-size: 1.5rem;
+    color: #c20019;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
+}
+.policy {
+    display: flex;
+    row-gap: 0rem;
+    column-gap: 1.5rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.main_logo {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    display: block;
-  }
-/* 애니메이션 */
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100%)); }
-  }
+}
+.insta:hover, .email:hover, .pol:hover {
+    color: #000;
+}
+
