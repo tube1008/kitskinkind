@@ -247,43 +247,153 @@
             </div>
         </section>
         <!-- 세번째 레이아웃 -->
-        <section class="contents">
+        <section class="contents dark_bg">
             <div class="video_box">
-                <video src="#" class="video"></video>
-                <a href="#" class="shop">SLEEP WITH KIT:</a>
+                <video controls autoplay loop style="pointer-events: none;"> 
+                    <source src="video/video_01.mp4" type="video/mp4"> 
+                 </video>
+                <a href="#" class="shop shop_video">SLEEP WITH KIT:</a>
             </div>
         </section>
         <!-- 네번째 레이아웃 -->
-        <section class="contents">
+        <section class="contents fourth_sec">
             <div class="cont_title">
                 <h2 class="title">What's in your kit?</h2>
                 <a href="#" class="shop_all">SHOP ALL</a>
             </div>
-            <div class="swiper-container content_box_02">
+            <div class="swiper-container content_box_03">
                 <div class="swiper-wrapper content_wrap">
                     <!-- 슬라이드 1번 -->
-                    <div class="swiper-slide slide">
-                        <div class="product_wrap">
-                            <a href="#" class="product_box">
-                                <div class="first_page">
-                                    <p class="info"><img src="./img/info.png" alt="정보보기"></p>
-                                    <p class="product_img"><img src="./img/section_04_01_slide.jpg" alt="제품이미지"></p>
+                    <div class="swiper-slide slide3">
+                        <a href="#" class="product_01">
+                            <div class="first">
+                                <div class="img">
+                                    <img src="./img/section_04_01_slide.jpg" class="first_img" alt="이미지">
                                 </div>
-                                <div class="second_page">
-                                    <p class="info"><img src="./img/info.png" alt="정보보기"></p>
-                                    <p class="product_img"><img src="./img/section_04_01_01_slide.jpg" alt="제품이미지"></p>
-                                    <div class="choice">
-                                        <p class="left">100ml</p>
-                                        <p class="right">30ml</p>
-                                        <a href="#" class="cart">ADD TO CART</a>
+                                <div class="img_hover">
+                                    <img src="./img/section_04_01_01_slide.jpg" class="second_img" alt="이미지">
+                                    <div class="cart_box">
+                                        <form action="#" method="post" id="quick" class="shop_product">
+                                            <fieldset>
+                                                <input type="radio" id="choice_01" value="100ml">
+                                                <label for="choice_01">100ml</label>
+                                                <input type="radio" id="choice_02" value="30ml">
+                                                <label for="choice_02">30ml</label>
+                                            </fieldset>
+                                            <button id="quick" class="shop_product" type="submit" name="add">ADD TO CART</button>
+                                        </form>
                                     </div>
                                 </div>
-                            </a>
-                            <div class="product_info">
-                                <p class="pdt_name">GOOD NIGHT PILLOW MIST</p>
-                                <P class="pdt_price">FROM $22</P>
+                                <div class="pdt_box">
+                                    <p class="pdt_name">GOOD NIGHT PILLOW MIST</p>
+                                    <p class="pdt_price">FROM $22</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
+                    </div>
+                    <!-- 슬라이드 2번 -->
+                    <div class="swiper-slide slide3">
+                        <a href="#" class="product_01">
+                            <div class="first">
+                                <div class="img">
+                                    <img src="./img/section_04_04_slide.jpg" class="first_img" alt="이미지">
+                                </div>
+                                <div class="img_hover">
+                                    <video controls autoplay loop style="pointer-events: none;" class="video_ct"> 
+                                        <source src="video/video_02.mp4" type="video/mp4"> 
+                                     </video>
+                                    <div class="cart_box">
+                                        <form action="#" method="post" id="quick" class="shop_product">
+                                            <fieldset>
+                                                <input type="radio" id="choice_01" value="100ml">
+                                                <label for="choice_01">50ml</label>
+                                                <input type="radio" id="choice_02" value="30ml">
+                                                <label for="choice_02">30ml</label>
+                                            </fieldset>
+                                            <button id="quick" class="shop_product" type="submit" name="add">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="pdt_box">
+                                    <p class="pdt_name">GOOD NIGHT BALM</p>
+                                    <p class="pdt_price">FROM $38</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 슬라이드 3번 -->
+                    <div class="swiper-slide slide3">
+                        <a href="#" class="product_01">
+                            <div class="first">
+                                <div class="img">
+                                    <img src="./img/section_04_03_slide.jpg" class="first_img" alt="이미지">
+                                </div>
+                                <div class="img_hover">
+                                    <img src="./img/section_04_01_01_slide.jpg" class="second_img" alt="이미지">
+                                    <div class="cart_box">
+                                        <form action="#" method="post" id="quick" class="shop_product">
+                                            <fieldset>
+                                                <input type="radio" id="choice_01" value="100ml">
+                                                <label for="choice_01">28 pack</label>
+                                                <input type="radio" id="choice_02" value="30ml">
+                                                <label for="choice_02">3pack</label>
+                                            </fieldset>
+                                            <button id="quick" class="shop_product" type="submit" name="add">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="pdt_box">
+                                    <p class="pdt_name">SLEEP POWDER</p>
+                                    <p class="pdt_price">FROM $14</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 슬라이드 4번 -->
+                    <div class="swiper-slide slide3">
+                        <a href="#" class="product_01">
+                            <div class="first">
+                                <div class="img">
+                                    <img src="./img/section_04_02_slide.jpg" class="first_img" alt="이미지">
+                                </div>
+                                <div class="img_hover">
+                                    <video controls autoplay loop style="pointer-events: none;" class="video_ct"> 
+                                        <source src="video/video_03.mp4" type="video/mp4"> 
+                                     </video>
+                                    <div class="cart_box">
+                                        <form action="#" method="post" id="quick" class="shop_product">
+                                            <button id="quick" class="shop_product" type="submit" name="add">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="pdt_box">
+                                    <p class="pdt_name">UNWIND BODY BALM</p>
+                                    <p class="pdt_price">$42</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- 슬라이드 5번 -->
+                    <div class="swiper-slide slide3">
+                        <a href="#" class="product_01">
+                            <div class="first">
+                                <div class="img">
+                                    <img src="./img/section_04_05_slide.jpg" class="first_img" alt="이미지">
+                                </div>
+                                <div class="img_hover">
+                                    <img src="./img/section_04_01_03_slide.jpg" class="second_img" alt="이미지">
+                                    <div class="cart_box">
+                                        <form action="#" method="post" id="quick" class="shop_product">
+                                            <button id="quick" class="shop_product" type="submit" name="add">ADD TO CART</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="pdt_box">
+                                    <p class="pdt_name">FUNCTIONAL FRAGRANCE: UNWIND</p>
+                                    <p class="pdt_price">$36</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>        
