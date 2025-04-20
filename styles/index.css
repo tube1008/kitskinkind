@@ -103,7 +103,6 @@ marquee {
     position: relative;
 }
 .bnr_img {
-    width: 100%;
     aspect-ratio: 19.5 / 9;
     overflow: hidden;
     position: relative;
@@ -225,6 +224,9 @@ marquee {
     display: block;
 }
 /* 세번째 섹션 */
+.dark_bg {
+    padding: 40px 0 0 0;
+}
 .white-text {
     color: white;
 }
@@ -237,7 +239,7 @@ marquee {
 }
 video {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 .shop_video {
     position: absolute;
@@ -445,4 +447,79 @@ footer {background: #faf3e8; padding: 40px;}
 .insta:hover, .email:hover, .pol:hover {
     color: #000;
 }
-
+@media screen and (max-width:1024px)
+    {
+        .bnr_title h2 {
+            font-size: 3rem;
+        }
+    }
+@media screen and (max-width:799px){
+    .advertise_box {
+        padding: 5px 0;
+    }
+    .advertise_box marquee {
+        font-size: 0.75rem;
+    }
+    .bnr_txt {
+        font-size: 1.75rem;
+    }
+    .bnr_title, .cont_title {
+        flex-flow: column nowrap;
+        display: block;
+        padding: 40px 20px;
+    }
+    .bnr_title h2, .title {
+        font-size: 2.0rem;
+        padding-bottom: 20px;
+    }
+    .bnr_name {
+        font-size: 1.25rem;
+    }
+    .cart_box {
+        bottom: 15%;
+    }
+    .fourth_sec {
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width:699px){
+    .menu .menu_box .menu_sub a {
+        padding: 5px 10px;
+    }
+    .bnr_img {
+        aspect-ratio: 17 / 15;
+    }
+    .bnr_txt {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+    .shop, .shop_all {
+        font-size: 0.75rem;
+    }
+    .bnr_title h2, .title {
+        font-size: 1.25rem;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+    .shop_product {
+        display: none;
+    }
+    footer {
+        padding: 20px;   
+    }
+    .information {
+        width: 100%;
+        flex-flow: column nowrap;
+    }
+    .info_box {padding-right: 0;}
+    .policy {
+        flex-direction: column;
+    }
+    .info_intro, .insta,.email, .enter_email, .etc p, .policy li a {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+    .enter_email {
+        margin: 12px 0;
+    }
+}
