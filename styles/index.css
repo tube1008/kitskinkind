@@ -449,8 +449,11 @@ footer {background: #faf3e8; padding: 40px;}
 }
 @media screen and (max-width:1024px)
     {
-        .bnr_title h2 {
-            font-size: 3rem;
+        .bnr_title h2, .title  {
+            font-size: 2.6rem;
+        }
+        .cart_box {
+            bottom: 13%;
         }
     }
 @media screen and (max-width:799px){
@@ -503,6 +506,9 @@ footer {background: #faf3e8; padding: 40px;}
     }
     .shop_product {
         display: none;
+    }
+    .product_name {
+        font-size: 1rem;
     }
     footer {
         padding: 20px;   
