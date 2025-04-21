@@ -6,6 +6,7 @@ html::-webkit-scrollbar {display: none;}
 /* 헤더 */
 /* 메인메뉴 */
 .contents {background: #faf3e8;}
+
 .top_hd {
     display: flex; flex-flow: row nowrap; 
     justify-content: space-between;
@@ -86,6 +87,34 @@ html::-webkit-scrollbar {display: none;}
 }
 .rt_box .cart {
     margin-bottom: 25px;
+}
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -20%;
+    right: 6.5%;
+    background: #fff;
+    border-radius: 99px;
+    padding: 15px;
+}
+.hamburger img {
+    width: 23px;
+    position: absolute;
+    top: 3.8px;
+    left: 3.8px;
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+.mobile-menu.open {
+    display: block;
 }
 /* 메인 */
 /* 광고글 */
@@ -234,17 +263,24 @@ marquee {
     color: inherit;
     transition: color 0.3s ease;
   }
-.video_box {
+  .video_box {
     position: relative;
-}
-video {
     width: 100%;
-    height: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.video_box video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
 }
 .shop_video {
     position: absolute;
     right: 2%;
-    bottom: 10%;
+    bottom: 5%;
 }
 /* 네번째 섹션 */
 .fourth_sec{
@@ -452,9 +488,6 @@ footer {background: #faf3e8; padding: 40px;}
         .bnr_title h2, .title  {
             font-size: 2.6rem;
         }
-        .cart_box {
-            bottom: 13%;
-        }
     }
 @media screen and (max-width:799px){
     .advertise_box {
@@ -478,16 +511,93 @@ footer {background: #faf3e8; padding: 40px;}
     .bnr_name {
         font-size: 1.25rem;
     }
-    .cart_box {
-        bottom: 15%;
-    }
+
     .fourth_sec {
         padding-bottom: 20px;
+    }
+    .return_top img {
+        width: 30px;
+    }
+    .lt_box {
+        z-index: 20;
+    }
+    .rt_box {
+        position: absolute;
+        z-index: 20;
+        right: 6.5%;
+    }
+    .rt_box a {width: 30px; height: 30px;}
+    .rt_box img {
+        width: 15px;
+    }
+    .rt_box .cart {
+        margin-bottom: 15px;
+    }
+    .video_box video {
+        aspect-ratio: 4 / 3;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: -15%;
+        left: 0;
+        width: 100vw;
+        height: 30vh;
+        background: #fff;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        backdrop-filter: blur(10px);
+        z-index: 10;
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .menu.open {
+        opacity: 1;
+        transform: translateY(25%);
+        pointer-events: auto;
+    }
+    .hamburger {
+        display: flex !important;
+    }
+    .top_hd {
+        align-items: center;
+    }
+    .menu_box {
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        align-items: center;
+        position: absolute;
+        top: -10%;
+    }
+    .menu_box .menu_sub a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+    }
+    .menu_box .menu_sub a:hover {
+        color: #fff;
+        background: #c20019;
+        border-radius: 99px;
+        transition: 0.3s;
+    }
+    .active-bg {
+        display: none;
+    }
+    .rt_box a, .hamburger {
+        background: #faf3e8;
     }
 }
 @media screen and (max-width:699px){
     .menu .menu_box .menu_sub a {
-        padding: 5px 10px;
+        padding: 5px;
+        text-align: center;
     }
     .bnr_img {
         aspect-ratio: 17 / 15;
@@ -503,9 +613,6 @@ footer {background: #faf3e8; padding: 40px;}
         font-size: 1.25rem;
         font-weight: 500;
         padding-bottom: 20px;
-    }
-    .shop_product {
-        display: none;
     }
     .product_name {
         font-size: 1rem;

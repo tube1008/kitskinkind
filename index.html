@@ -76,11 +76,12 @@
     </div>
     <header>
         <!-- 메인메뉴 -->
+
         <div class="top_hd">
             <div class="lt_box">
                 <a href="#" class="return_top"><img src="./img/hd_menu_logo.png" alt="로고"></a>
             </div>
-            <div class="menu">
+            <nav class="menu">
                 <ul class="menu_box">
                     <div class="active-bg"></div>
                     <li class="menu_sub"><a href="#">SHOP</a></li>
@@ -88,6 +89,9 @@
                     <li class="menu_sub"><a href="#">APOTHECARY</a></li>
                     <li class="menu_sub"><a href="#">JOURNAL</a></li>
                 </ul>
+            </nav>
+            <div id="hamburger" class="hamburger md:hidden" style="display: none;">
+                <img src="./img/mobile_menu.png" alt="모바일메뉴">
             </div>
             <div class="rt_box">
                 <a href="#" class="cart"><img src="./img/cart.png" alt="장바구니"></a>
@@ -248,7 +252,7 @@
         <!-- 세번째 레이아웃 -->
         <section class="contents dark_bg">
             <div class="video_box">
-                <video controls autoplay loop muted style="pointer-events: none;"> 
+                <video controls autoplay loop muted playsinline style="pointer-events: none;"> 
                     <source src="video/video_01.mp4" type="video/mp4"> 
                  </video>
                 <a href="#" class="shop shop_video">SLEEP WITH KIT:</a>
@@ -298,7 +302,7 @@
                                     <img src="./img/section_04_04_slide.jpg" class="first_img" alt="이미지">
                                 </div>
                                 <div class="img_hover">
-                                    <video controls autoplay loop muted style="pointer-events: none;" class="video_ct"> 
+                                    <video controls autoplay loop muted playsinline style="pointer-events: none;" class="video_ct"> 
                                         <source src="video/video_02.mp4" type="video/mp4"> 
                                      </video>
                                     <div class="cart_box">
@@ -356,7 +360,7 @@
                                     <img src="./img/section_04_02_slide.jpg" class="first_img" alt="이미지">
                                 </div>
                                 <div class="img_hover">
-                                    <video controls autoplay loop muted style="pointer-events: none;" class="video_ct"> 
+                                    <video controls autoplay loop muted playsinline style="pointer-events: none;" class="video_ct"> 
                                         <source src="video/video_03.mp4" type="video/mp4"> 
                                      </video>
                                     <div class="cart_box">

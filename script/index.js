@@ -43,6 +43,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.querySelector('.menu');
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    menu.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+
+  menu.addEventListener('click', (e) => {
+    if (e.target === menu) {
+      menu.classList.remove('open');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 800) {
+      menu.classList.remove('open');
+    }
+  });  
+
 let swiperContainer = document.querySelector('.content_box')
 let swiper = new Swiper('.content_box', {
     slidesPerView: 1,
@@ -63,7 +90,26 @@ let swiper01 = new Swiper('.content_box_02', {
         delay: 0,
         disableOnInteraction: false,
     },
-    speed: 4000, 
+    speed: 4000,
+
+    breakpoints: {
+      430: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      699: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      799: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+     } 
 });
 
 let swiperContainer02 = document.querySelector('.content_box_03')
@@ -76,5 +122,24 @@ let swiper02 = new Swiper('.content_box_03', {
         delay: 0,
         disableOnInteraction: false,
     },
-    speed: 4000, 
+    speed: 4000,
+    
+    breakpoints: {
+      430: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      699: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      799: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+     } 
 });
