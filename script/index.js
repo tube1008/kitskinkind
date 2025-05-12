@@ -93,6 +93,10 @@ let swiper01 = new Swiper('.content_box_02', {
     speed: 4000,
 
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
       430: {
         slidesPerView: 1,
         spaceBetween: 40
@@ -125,6 +129,10 @@ let swiper02 = new Swiper('.content_box_03', {
     speed: 4000,
     
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
       430: {
         slidesPerView: 1,
         spaceBetween: 40
